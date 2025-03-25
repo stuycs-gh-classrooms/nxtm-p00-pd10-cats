@@ -34,14 +34,10 @@ What is the formula for your force? Including descriptions/definitions for the s
 ![image](https://github.com/user-attachments/assets/ac233f67-e50f-4928-b65b-7e68285c6207)
 
 
-m1v1 = m2v2
-- m1 and m2 = mass of orbs
-- v2 and v2 = velocity of orbs
-
 ### Custom Force
 - What information that is already present in the `Orb` or `OrbNode` classes does this force use?
   - mass
-  - acceleration
+  - velocity
 
 - Does this force require any new constants, if so what are they and what values will you try initially?
   - YOUR ANSWER HERE
