@@ -31,7 +31,8 @@ All projects will require the following:
 ### Forumla
 What is the formula for your force? Including descriptions/definitions for the symbols. (You may include a picture of the formula if it is not easily typed.)
 
-![image](https://github.com/user-attachments/assets/ac233f67-e50f-4928-b65b-7e68285c6207)
+![image](https://github.com/user-attachments/assets/07aa6eb2-9f86-4543-86c6-bbc7baa8aca5)
+
 
 
 ### Custom Force
