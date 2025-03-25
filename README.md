@@ -31,6 +31,9 @@ All projects will require the following:
 ### Forumla
 What is the formula for your force? Including descriptions/definitions for the symbols. (You may include a picture of the formula if it is not easily typed.)
 
+![image](https://github.com/user-attachments/assets/ac233f67-e50f-4928-b65b-7e68285c6207)
+
+
 m1v1 = m2v2
 - m1 and m2 = mass of orbs
 - v2 and v2 = velocity of orbs
