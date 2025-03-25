@@ -33,36 +33,35 @@ What is the formula for your force? Including descriptions/definitions for the s
 
 ![image](https://github.com/user-attachments/assets/07aa6eb2-9f86-4543-86c6-bbc7baa8aca5)
 
-
-
 ### Custom Force
 - What information that is already present in the `Orb` or `OrbNode` classes does this force use?
   - mass
   - velocity
 
 - Does this force require any new constants, if so what are they and what values will you try initially?
-  - YOUR ANSWER HERE
+  - No new constants
 
 - Does this force require any new information to be added to the `Orb` class? If so, what is it and what data type will you use?
-  - YOUR ANSWER HERE
+  - boolean Collision check
 
 - Does this force interact with other `Orbs`, or is it applied based on the environment?
-  - YOUR ANSWER HERE
+  - Yes, this force is triggered when two orbs collide and only depends on other orbs. 
 
 - In order to calculate this force, do you need to perform extra intermediary calculations? If so, what?
-  - YOUR ANSWER HERE
+  - No, you can just calculate the force with the initial mass and velocity of the orbs.
 
 --- 
 
 ### Simulation 1: Gravity
 Describe how you will attempt to simulate orbital motion.
+- Create a fixedOrb at the center of the simulation and have the other orbs orbit the fixedOrb.
 
 --- 
 
 ### Simulation 2: Spring
 Describe what your spring simulation will look like. Explain how it will be setup, and how it should behave while running.
 
-YOUR ANSWER HERE
+- 
 
 --- 
 
