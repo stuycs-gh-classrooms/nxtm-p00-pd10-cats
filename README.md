@@ -33,6 +33,8 @@ What is the formula for your force? Including descriptions/definitions for the s
 
 ![image](https://github.com/user-attachments/assets/07aa6eb2-9f86-4543-86c6-bbc7baa8aca5)
 
+- Note: this force is meant to be in a gas container, meaning no energy is lost when the orbs collide with the wall
+
 ### Custom Force
 - What information that is already present in the `Orb` or `OrbNode` classes does this force use?
   - mass
