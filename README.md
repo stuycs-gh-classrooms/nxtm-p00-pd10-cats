@@ -68,7 +68,7 @@ Describe what your spring simulation will look like. Explain how it will be setu
 ### Simulation 3: Drag
 Describe what your drag simulation will look like. Explain how it will be setup, and how it should behave while running.
 
-YOUR ANSWER HERE
+- 
 
 --- 
 
