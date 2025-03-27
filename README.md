@@ -71,19 +71,18 @@ Describe what your spring simulation will look like. Explain how it will be setu
 ### Simulation 3: Drag
 Describe what your drag simulation will look like. Explain how it will be setup, and how it should behave while running.
 
-- In the drag simulation, objects will experience a resistive force proportional to their velocity, slowing them down as they move through a medium, such as air or water.
-
+- In the drag simulation, objects will experience a resistive force proportional to their velocity, slowing them down as they move through a medium of air.
 --- 
 
 ### Simulation 4: Custom force
 Describe what your Custom force simulation will look like. Explain how it will be setup, and how it should behave while running.
 
-The custom force simulation will involve objects colliding with each other, where kinetic energy is not conserved, and the objects stick together or deform after impact, resulting in a loss of energy during the collision.
+The custom force simulation will involve objects colliding with each other, where kinetic energy is conserved, and the objects collide with each other after impact, resulting perfectly elastic collison.
 
 --- 
 
 ### Simulation 5: Combination
 Describe what your combination simulation will look like. Explain how it will be setup, and how it should behave while running.
 
-The combination simulation will involve multiple forces, such as gravity, drag, and spring forces, acting on objects that undergo inelastic collisions. During collisions, objects will lose kinetic energy and stick together or deform, while the other forces continue to affect their motion over time.
+The combination simulation will involve multiple forces, such as gravity, drag, and spring forces, acting on objects that undergo elastic collisions. During collisions, objects will conserve kinetic energy and bounce away from each other, while the other forces continue to affect their motion over time.
 
