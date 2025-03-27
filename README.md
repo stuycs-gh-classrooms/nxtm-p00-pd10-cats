@@ -57,32 +57,33 @@ What is the formula for your force? Including descriptions/definitions for the s
 ### Simulation 1: Gravity
 Describe how you will attempt to simulate orbital motion.
 - Create a fixedOrb at the center of the simulation and have the other orbs orbit the fixedOrb.
+- I will create a fixed central object (fixedOrb) at the center of the simulation and apply gravitational forces to the orbiting objects to make them orbit around the fixedOrb, simulating orbital motion.
 
 --- 
 
 ### Simulation 2: Spring
 Describe what your spring simulation will look like. Explain how it will be setup, and how it should behave while running.
 
-- 
+- The spring simulation will feature a mass attached to a spring, with the spring constantly pulling the mass towards its equilibrium position while oscillating back and forth based on Hooke's law.
 
 --- 
 
 ### Simulation 3: Drag
 Describe what your drag simulation will look like. Explain how it will be setup, and how it should behave while running.
 
-- 
+- In the drag simulation, objects will experience a resistive force proportional to their velocity, slowing them down as they move through a medium, such as air or water.
 
 --- 
 
 ### Simulation 4: Custom force
 Describe what your Custom force simulation will look like. Explain how it will be setup, and how it should behave while running.
 
-YOUR ANSWER HERE
+The custom force simulation will involve objects colliding with each other, where kinetic energy is not conserved, and the objects stick together or deform after impact, resulting in a loss of energy during the collision.
 
 --- 
 
 ### Simulation 5: Combination
 Describe what your combination simulation will look like. Explain how it will be setup, and how it should behave while running.
 
-YOUR ANSWER HERE
+The combination simulation will involve multiple forces, such as gravity, drag, and spring forces, acting on objects that undergo inelastic collisions. During collisions, objects will lose kinetic energy and stick together or deform, while the other forces continue to affect their motion over time.
 
