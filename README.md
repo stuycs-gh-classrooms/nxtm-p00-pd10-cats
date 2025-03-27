@@ -45,12 +45,13 @@ What is the formula for your force? Including descriptions/definitions for the s
 
 - Does this force require any new information to be added to the `Orb` class? If so, what is it and what data type will you use?
   - boolean Collision check
+  - If the orbs have collided, boolean collision check will become true and the custom force will be triggered.
 
 - Does this force interact with other `Orbs`, or is it applied based on the environment?
-  - Yes, this force is triggered when two orbs collide and only depends on other orbs. 
+  - Yes, this force is triggered when two orbs collide and only depends on other orbs. When the orbs collide, the custom force will be triggered, and the orbs will bounce off of each other with their new final velocities, which will be calculated based on the formula.
 
 - In order to calculate this force, do you need to perform extra intermediary calculations? If so, what?
-  - No, you can just calculate the force with the initial mass and velocity of the orbs.
+  - No, you can just calculate this force with the initial mass and velocity of the orbs.
 
 --- 
 
@@ -79,6 +80,7 @@ Describe what your drag simulation will look like. Explain how it will be setup,
 ### Simulation 4: Custom force
 Describe what your Custom force simulation will look like. Explain how it will be setup, and how it should behave while running.
 
+- A random number of orbs (not connected by springs) that have different masses and different velocities will be created in the simulation. When the simulation is running, the orbs will begin moving around the screen in random directions, and will bounce off the edges of the screen without losing energy as the simulation will be run in a gas container. When the orbs collide with each other, the custom force will be triggered and the orbs will fly away from each other with their new velocities, which would have depended on the intial velocity and initial mass of the two orbs. The direction that the orbs move in after collision will be the opposite of the original direction that they were traveling in.
 
 
 --- 
@@ -86,4 +88,6 @@ Describe what your Custom force simulation will look like. Explain how it will b
 ### Simulation 5: Combination
 Describe what your combination simulation will look like. Explain how it will be setup, and how it should behave while running.
 
+- Combination of drag, gravity, and custom force
+- Similarly to the custom force simulation, the simulation will start with a random number of orbs that aren't connected by springs. The orbs will have random masses and random initial velocities. However, the bottom fourth of the screen will be affected by drag, and all the orbs will experience gravity in the downwards direction, similar to Earth gravity. When the orbs collide, they will fly away from each other with final velocities determined by the custom force.
 
