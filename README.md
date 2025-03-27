@@ -57,32 +57,33 @@ What is the formula for your force? Including descriptions/definitions for the s
 ### Simulation 1: Gravity
 Describe how you will attempt to simulate orbital motion.
 - Create a fixedOrb at the center of the simulation and have the other orbs orbit the fixedOrb.
-- I will create a fixed central object (fixedOrb) at the center of the simulation and apply gravitational forces to the orbiting objects to make them orbit around the fixedOrb, simulating orbital motion.
+- Requires gravity, inertia, centripetal force
 
 --- 
 
 ### Simulation 2: Spring
 Describe what your spring simulation will look like. Explain how it will be setup, and how it should behave while running.
 
-- The spring simulation will feature a mass attached to a spring, with the spring constantly pulling the mass towards its equilibrium position while oscillating back and forth based on Hooke's law.
+- The simulation will only have two orbs connected by a spring that will start at random positions on the screen. There will be an equal chance of having the spring start compressed or extended beyond normal length. The orbs will then experience spring force and either push each other away or attract each other.
 
 --- 
 
 ### Simulation 3: Drag
 Describe what your drag simulation will look like. Explain how it will be setup, and how it should behave while running.
 
-- In the drag simulation, objects will experience a resistive force proportional to their velocity, slowing them down as they move through a medium of air.
+- The bottom half of the simulation will be affected by drag, with the force of drag being represented by the color of the bottom half: if the drag coefficient is high the bottom half will be red, if it is medium it will be yellow, and if it is low it will be green. There will be options to change the force of the drag on the bottom of the screen, as well as an option to remove drag from the bottom of the screen.
+- We will have to ensure that the mass of the orbs are not too high, as orbs with too high of a mass will sometimes be flung upwards as a result of experiencing drag force.
+  
 --- 
 
 ### Simulation 4: Custom force
 Describe what your Custom force simulation will look like. Explain how it will be setup, and how it should behave while running.
 
-The custom force simulation will involve objects colliding with each other, where kinetic energy is conserved, and the objects collide with each other after impact, resulting perfectly elastic collison.
+
 
 --- 
 
 ### Simulation 5: Combination
 Describe what your combination simulation will look like. Explain how it will be setup, and how it should behave while running.
 
-The combination simulation will involve multiple forces, such as gravity, drag, and spring forces, acting on objects that undergo elastic collisions. During collisions, objects will conserve kinetic energy and bounce away from each other, while the other forces continue to affect their motion over time.
 
