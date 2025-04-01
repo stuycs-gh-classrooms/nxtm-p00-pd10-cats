@@ -29,7 +29,7 @@ void draw() {
   displayToggles();
 }
 
-<<<<<<< HEAD
+
 void makeOrbs() {
   orbCount = NUM_ORBS;
   println(orbCount);
@@ -40,8 +40,6 @@ void makeOrbs() {
   }
 }
 
-void displayToggles() { //make the rectangles
-=======
 void keyPressed() {
   if (key == ' ') {
     status[MOVING] = !status[MOVING];
@@ -65,18 +63,17 @@ void keyPressed() {
     status[DRAGM] = !status[DRAGM];
   }
   if (key == 'l' ) {
-    status[DRAGL] = !status[DRAGL]; 
+    status[DRAGL] = !status[DRAGL];
   }
   if (key == 'c') {
-    status[CUSTOMF] = !status[CUSTOMF]; 
-  }  
+    status[CUSTOMF] = !status[CUSTOMF];
+  }
   if (key == 'C') {
-    status[COMBO] = !status[COMBO]; 
+    status[COMBO] = !status[COMBO];
   }
 }
 
 void displayToggles() {
->>>>>>> a3241ce336db88e009dc65a0a3a374a9f2022fde
   textAlign(LEFT, TOP);
   textSize(18);
 
