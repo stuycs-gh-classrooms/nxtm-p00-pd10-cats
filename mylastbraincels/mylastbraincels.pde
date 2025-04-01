@@ -1,5 +1,15 @@
 String[] modes = {"Moving", "Bounce", "Gravity", "Spring", "Drag", "DragH", "DragM", "DragL", "Custom", "Combo"};
 boolean[] status = new boolean[10];
+int MOVING = 0;
+int BOUNCE = 1;
+int GRAVITY = 2;
+int SPRING = 3;
+int DRAGF = 4;
+int DRAGH = 5;
+int DRAGM = 6;
+int DRAGL = 7;
+int CUSTOMF = 8;
+int COMBO = 9;
 
 void setup() {
   size(600, 600);
@@ -8,6 +18,39 @@ void setup() {
 void draw() {
   background(255);
   displayToggles();
+}
+
+void keyPressed() {
+  if (key == ' ') {
+    status[MOVING] = !status[MOVING];
+  }
+  if (key == 'b') {
+    status[BOUNCE] = !status[BOUNCE];
+  }
+  if (key == 'g') {
+    status[GRAVITY] = !status[GRAVITY];
+  }
+  if (key == 's') {
+    status[SPRING] = !status[SPRING];
+  }
+  if (key == 'd') {
+    status[DRAGF] = !status[DRAGF];
+  }
+  if (key == 'h') {
+    status[DRAGH] = !status[DRAGH];
+  }
+  if (key == 'm' ) {
+    status[DRAGM] = !status[DRAGM];
+  }
+  if (key == 'l' ) {
+    status[DRAGL] = !status[DRAGL]; 
+  }
+  if (key == 'c') {
+    status[CUSTOMF] = !status[CUSTOMF]; 
+  }  
+  if (key == 'C') {
+    status[COMBO] = !status[COMBO]; 
+  }
 }
 
 void displayToggles() {
