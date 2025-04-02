@@ -4,6 +4,8 @@ int MIN_SIZE = 10;
 int MAX_SIZE = 60;
 float MIN_MASS = 10;
 float MAX_MASS = 100;
+int SPRING_LENGTH = 50;
+float SPRING_K = 0.005;
 
 Orb[] orbs;
 String[] modes = {"Moving", "Bounce", "Gravity", "Spring", "Drag", "DragH", "DragM", "DragL", "Custom", "Combo"};
@@ -27,6 +29,18 @@ void setup() {
 void draw() {
   background(255);
   displayToggles();
+
+  for (int i = 0; i < orbCount; i++) {
+    orbs[i].display();
+  }
+
+  for (int i=0; i < orbCount - 1; i++) {
+    drawSpring(orbs[i], orbs[i+1]);
+  }
+  
+  if (status[SPRING]) {
+    applySprings();
+  }
 }
 
 
@@ -37,6 +51,32 @@ void makeOrbs() {
   for (int i = 0; i < orbCount; i++) {
     orbs[i] = new Orb();
     println(orbs[i].center.x);
+  }
+}
+
+void drawSpring(Orb o0, Orb o1)
+{
+  float d = dist(o0.center.x, o0.center.y, o1.center.x, o1.center.y);
+  if (d > SPRING_LENGTH) {
+    stroke(255, 0, 0);
+  }
+  if (d < SPRING_LENGTH) {
+    stroke(0, 255, 0);
+  }
+  if (d == SPRING_LENGTH) {
+    stroke(0);
+  }
+  line(o0.center.x, o0.center.y, o1.center.x, o1.center.y);
+}//drawSpring
+
+void applySprings()
+{
+  for (int i = 0; i < orbCount; i++) {
+    if (i == orbCount - 1) {
+      PVector springForce = orbs[i].getSpring(orbs[i-1], SPRING_LENGTH, SPRING_K);
+      orbs[i].applyForce(springForce);
+
+    }
   }
 }
 
@@ -83,6 +123,7 @@ void displayToggles() {
     } else {
       fill(255, 0, 0);
     }
+    noStroke();
     rect(i * 60, 0, 60, 20);
   } //create the rectangles
 
