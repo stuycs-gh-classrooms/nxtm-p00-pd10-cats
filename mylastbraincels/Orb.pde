@@ -31,6 +31,18 @@ class Orb
     acceleration = new PVector();
     setColor();
   }
+  
+  void move(boolean bounce)
+  {
+    if (bounce) {
+      xBounce();
+      yBounce();
+    }
+
+    velocity.add(acceleration);
+    center.add(velocity);
+    acceleration.mult(0);
+  }//move
 
   void applyForce(PVector force)
   {

@@ -1,4 +1,4 @@
-int NUM_ORBS = 2;
+int NUM_ORBS = 5;
 int orbCount;
 int MIN_SIZE = 10;
 int MAX_SIZE = 60;
@@ -38,8 +38,20 @@ void draw() {
     drawSpring(orbs[i], orbs[i+1]);
   }
   
-  if (status[SPRING]) {
+  if (status[MOVING]) {
     applySprings();
+    //for (int o=0; o < orbCount; o++) {
+    //  if (toggles[GRAVITY] == true) {
+    //    orbs[o].applyForce(orbs[o].getGravity(earth, G_CONSTANT));
+    //  }
+    //  if (toggles[DRAGF] == true) {
+    //    orbs[o].applyForce(orbs[o].getDragForce(D_COEF));
+    //  }
+    //}//gravity, drag
+
+    for (int o=0; o < orbCount; o++) {
+      orbs[o].move(status[BOUNCE]);
+    }    
   }
 }
 
@@ -69,14 +81,9 @@ void drawSpring(Orb o0, Orb o1)
   line(o0.center.x, o0.center.y, o1.center.x, o1.center.y);
 }//drawSpring
 
-void applySprings()
-{
-  for (int i = 0; i < orbCount; i++) {
-    if (i == orbCount - 1) {
-      PVector springForce = orbs[i].getSpring(orbs[i-1], SPRING_LENGTH, SPRING_K);
-      orbs[i].applyForce(springForce);
-
-    }
+void applySprings() {
+  for (int i = 1; i < orbs.length; i++) {
+    orbs[i].applyForce(orbs[i].getSpring(orbs[i-1], SPRING_LENGTH, SPRING_K));
   }
 }
 
