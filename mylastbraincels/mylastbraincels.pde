@@ -29,7 +29,7 @@ void draw() {
   displayToggles();
 }
 
-<<<<<<< HEAD
+
 void makeOrbs() {
   orbCount = NUM_ORBS;
   println(orbCount);
@@ -40,8 +40,7 @@ void makeOrbs() {
   }
 }
 
-void displayToggles() { //make the rectangles
-=======
+
 void keyPressed() {
   if (key == ' ') {
     status[MOVING] = !status[MOVING];
@@ -76,7 +75,7 @@ void keyPressed() {
 }
 
 void displayToggles() {
->>>>>>> a3241ce336db88e009dc65a0a3a374a9f2022fde
+
   textAlign(LEFT, TOP);
   textSize(18);
 
