@@ -54,8 +54,6 @@ void makeOrbs() {
   }
 }
 
-<<<<<<< HEAD
-=======
 void drawSpring(Orb o0, Orb o1)
 {
   float d = dist(o0.center.x, o0.center.y, o1.center.x, o1.center.y);
@@ -81,7 +79,6 @@ void applySprings()
     }
   }
 }
->>>>>>> 2666991c6e5b96b05fc50c40292b4741a8859485
 
 void keyPressed() {
   if (key == ' ') {
@@ -117,10 +114,7 @@ void keyPressed() {
 }
 
 void displayToggles() {
-<<<<<<< HEAD
 
-=======
->>>>>>> 2666991c6e5b96b05fc50c40292b4741a8859485
   textAlign(LEFT, TOP);
   textSize(18);
 
