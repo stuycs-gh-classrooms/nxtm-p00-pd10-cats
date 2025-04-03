@@ -37,9 +37,8 @@ void draw() {
   for (int i=0; i < orbCount - 1; i++) {
     drawSpring(orbs[i], orbs[i+1]);
   }
-  
+
   if (status[MOVING]) {
-    applySprings();
     //for (int o=0; o < orbCount; o++) {
     //  if (toggles[GRAVITY] == true) {
     //    orbs[o].applyForce(orbs[o].getGravity(earth, G_CONSTANT));
@@ -49,11 +48,17 @@ void draw() {
     //  }
     //}//gravity, drag
 
+    //for (int o=0; o < orbCount; o++) {
+    //  orbs[o].move(status[BOUNCE]);
+    //}
+  }
+  if (status[MOVING] && status[SPRING] == true) {
     for (int o=0; o < orbCount; o++) {
       orbs[o].move(status[BOUNCE]);
-    }    
+    }
+    applySprings();
   }
-}
+} // spring simulation
 
 
 void makeOrbs() {
